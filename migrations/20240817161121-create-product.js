@@ -1,40 +1,54 @@
-'use strict';
-/** @type {import('sequelize-cli').Migration} */
+// migrations/xxxx-update-products-table.js
 module.exports = {
-  async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Products', {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
-      },
-      name: {
-        type: Sequelize.STRING
-      },
-      description: {
-        type: Sequelize.TEXT
-      },
-      price: {
-        type: Sequelize.DECIMAL
-      },
-      stock: {
-        type: Sequelize.INTEGER
-      },
-      category_id: {
-        type: Sequelize.INTEGER
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
-      }
+  up: async (queryInterface, Sequelize) => {
+    await queryInterface.addColumn('Products', 'enabled', {
+      type: Sequelize.BOOLEAN,
+      defaultValue: false,
     });
+
+    await queryInterface.addColumn('Products', 'slug', {
+      type: Sequelize.STRING,
+      allowNull: false,
+    });
+
+    await queryInterface.addColumn('Products', 'price_with_discount', {
+      type: Sequelize.FLOAT,
+      allowNull: false,
+    });
+
+    await queryInterface.addColumn('Products', 'use_in_menu', {
+      type: Sequelize.BOOLEAN,
+      defaultValue: false,
+    });
+
+    await queryInterface.changeColumn('Products', 'price', {
+      type: Sequelize.FLOAT,
+      allowNull: false,
+    });
+
+    await queryInterface.changeColumn('Products', 'stock', {
+      type: Sequelize.INTEGER,
+      defaultValue: 0,
+    });
+
+    await queryInterface.renameColumn('Products', 'createdAt', 'created_at');
+    await queryInterface.renameColumn('Products', 'updatedAt', 'updated_at');
   },
-  async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Products');
-  }
+
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.removeColumn('Products', 'enabled');
+    await queryInterface.removeColumn('Products', 'slug');
+    await queryInterface.removeColumn('Products', 'price_with_discount');
+    await queryInterface.removeColumn('Products', 'use_in_menu');
+    await queryInterface.changeColumn('Products', 'price', {
+      type: Sequelize.DECIMAL(10, 0),
+      allowNull: true,
+    });
+    await queryInterface.changeColumn('Products', 'stock', {
+      type: Sequelize.INTEGER,
+      allowNull: true,
+    });
+    await queryInterface.renameColumn('Products', 'created_at', 'createdAt');
+    await queryInterface.renameColumn('Products', 'updated_at', 'updatedAt');
+  },
 };

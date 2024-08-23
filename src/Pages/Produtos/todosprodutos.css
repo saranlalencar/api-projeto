@@ -1,0 +1,25 @@
+
+
+
+.todos-produtos{
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 300;
+}
+
+
+.lista-produtos-todos-produtos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .todos-produtos{
+        flex-direction: column;
+        align-items: center;
+    }
+}

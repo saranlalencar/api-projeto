@@ -1,0 +1,224 @@
+
+
+.containerofertas{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 500px;
+    max-width: 1200px;
+    min-width: 300px ;
+    /* background-color: yellow; */
+}
+
+.slides{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 90%;
+    /* background-color: blue; */
+}
+
+.swiper{
+    display: flex;
+    width: 100%;
+    /* background-color: #cf1030; */
+}
+
+.box-left{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3rem ;
+}
+
+.p1-texts-box-left{
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #c4125c;
+    opacity: 92%;
+}
+
+.p2-texts-box-left{
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: #141414;
+    opacity: 97%;
+}
+
+.texts-box-left button{
+    width: 140px;
+    height: 40px;
+    font-size: 17px;
+    border-radius: 5px;
+    border: none;
+    background-color: #cf1030;
+    color: white;
+    cursor: pointer;
+}
+
+.texts-box-left{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* .center-box-left{
+  line-height: 1.1;
+} */
+
+.center-box-left h1{
+    font-size: 54px;
+    font-family: sans-serif;
+    font-weight: 800;
+    line-height: 0.9;
+    margin: 0.6rem 0;
+    opacity: 93%;
+}
+
+.center-box-left p{
+    font-size: 10px;
+    font-family: italic,sans-serif;
+    color: #c4125c;
+    font-weight: 800;
+}
+
+.box-right{
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-right img{
+    width: 400px; 
+}
+
+@media screen and (max-width: 900px) {
+
+    .containerofertas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        height: 900px;
+        padding: 0.5rem 0;
+        max-width: 1000px;
+        min-width: 300px ;
+        /* background-color: red; */
+    }
+    
+    .swiper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        /* background-color: #cf1030; */
+    }
+    .slides{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 90%;
+        /* background-color: blue; */
+    }
+    
+
+    .box-left{
+        width: 90%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .center-box-left{
+        width: 100%;
+    }
+
+    .center-box-left h1{
+        font-size: 40px;
+        font-family: sans-serif;
+        font-weight: 800;
+        line-height: 0.9;
+        margin: 0rem 0;
+        opacity: 93%;
+    }
+
+    
+    .p1-texts-box-left{
+        font-size: 17px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        color: #c4125c;
+        opacity: 92%;
+    }
+
+    .p2-texts-box-left{
+        font-size: 14px;
+        font-family: sans-serif;
+        color: #141414;
+        opacity: 97%;
+    }
+    
+    .texts-box-left button{
+        width: 140px;
+        height: 40px;
+        font-size: 17px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+    }
+    
+    .texts-box-left{
+        width: 90%;
+        height: 90%;
+        display: flex;
+        padding: 1rem 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    /* .center-box-left{
+      line-height: 1.1;
+    } */
+    
+    .center-box-left p{
+        margin: 10px 0;
+        font-size: 10px;
+        font-family: italic,sans-serif;
+        color: #c4125c;
+        font-weight: 800;
+    }
+    
+    .box-right{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .box-right img{
+        width: 80%;
+        max-width: 500px;
+        min-width: 300px;
+        border-radius: 4px 8px 15px 22px ;
+        
+    }
+    
+}

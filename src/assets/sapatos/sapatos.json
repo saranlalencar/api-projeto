@@ -1,0 +1,13 @@
+{
+    "sapatos": [
+      {
+        "id": 1,
+        "nome": "Love Brack 444",
+        "modelo": "Tênis",
+        "sexo": "Feminino",
+        "preco": 199.90,
+        "imagemUrl":"./55.jpeg"
+      }
+    ]
+  }
+  
